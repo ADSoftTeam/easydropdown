@@ -1,7 +1,7 @@
-> NB: This project is not currently under developement or maintainance. Unfortunately I do not have time to devote to it at the moment, but a v3.0 rewrite will happen at some point in the future. Issues have been disabled for now, but I would recommend reviewing the pending pull requests to get an idea of which issues may affect your project and the neccessary fixes that have been generously contributed by the community. Unfortunately I can not respond to any support questions regarding this plugin. Thank you.
+> NB: Данный скрипт был найден на просторах интернета и использован в своем проекте, в котором мне захотелось добавить поддержку иконок внутри выпадающего списка. Что и было сделано. Создан данный форк.
 
 # EasyDropDown
-### A Drop-down Builder For Styled Inputs and Menus
+### A Drop-down Builder For Styled Inputs and Menus (witch supports icons inside option)
 
 ### What Is It?
 
@@ -33,8 +33,7 @@ If you are using labels within the <select> element, identify them with the clas
 		<option value="" class="label">Month</option>
 		<option value="1">January</option>
 		<option value="2">February</option>
-		<option value="3">March</option>
-		...
+		<option value="3">March</option>	
 	</select>
 	
 To build your dropdown with an arbitrary option pre-selected, simply give it the selected attribute as you normally would:
@@ -43,8 +42,7 @@ To build your dropdown with an arbitrary option pre-selected, simply give it the
 		<option value="" class="label">Month</option>
 		<option value="1">January</option>
 		<option value="2" selected>February</option>
-		<option value="3">March</option>
-		...
+		<option value="3">March</option>		
 	</select>
 	
 Similarly, a dropdown may be disabled with the disabled attribute:
@@ -53,8 +51,7 @@ Similarly, a dropdown may be disabled with the disabled attribute:
 		<option value="" class="label">Month</option>
 		<option value="1">January</option>
 		<option value="2">February</option>
-		<option value="3">March</option>
-		...
+		<option value="3">March</option>		
 	</select>
 	
 No custom JS required!
