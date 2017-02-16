@@ -54,6 +54,15 @@ Similarly, a dropdown may be disabled with the disabled attribute:
 		<option value="3">March</option>		
 	</select>
 	
+Use witch icons inside option:
+
+	<select class="dropdown">
+		<option value="" class="label">Month</option>
+		<option value="1" data-icon="/images/icon1.png">January</option>
+		<option value="2" data-icon="/images/icon2.png">February</option>
+		<option value="3" data-icon="/images/icon3.png">March</option>		
+	</select>
+	
 No custom JS required!
 
 ###How To Style It
@@ -78,70 +87,3 @@ Each drop-down has the following basic markup structure that you can target with
 		</div>
 	</div>
 	
-###The following classes are added/removed dynamically:
-
-+ .focus (container)
-On input focus
-+ .open (container)
-On menu open
-+ .scrollable (container)
-When in scroll mode (see cutOff)
-+ .bottom (container)
-On scroll bottom-out
-+ .touch (container)
-When in native touch UI mode (see nativeTouch)
-+ .disabled (container)
-When disabled
-+ .focus (menu item)
-On hover or keyboard focus
-+ .active (menu item)
-Selected menu item
-
-###Advanced Usage
-
-Alternatively, by not using the class 'dropdown' you can instantiate your dropdowns manually in your javascript, with custom settings.
-
-	$(function(){
-		var $selects = $('select');
-						
-		$selects.easyDropDown({
-			cutOff: 10,
-			wrapperClass: 'my-dropdown-class',
-			onChange: function(selected){
-				// do something
-			}
-		});
-	});
-	
-You may also define your customizable settings directly in your HTML via a JSON Object in the data-settings attribute:
-
-	<select class="dropdown" 
-		data-settings='{"cutOff":6}'>
-		<option value="1">Option 1</option>
-		<option value="2">Option 2</option>
-		..
-	</select>
-	
-###Customizable Settings
-
-+ cutOff (integer)
-The maximum number of items to show before scrolling (default false).
-+ wrapperClass (string)
-The class of the parent wrapper element, used to target styling (default 'dropdown').
-+ onChange (function)
-A custom function to call when an item is selected. Useful for non-form input uses. An object containing the selected item's value and title is passed as an argument.
-+ nativeTouch (boolean)
-Fallback to native UI on touch-enabled devices (default true).
-
-###Methods
-
-+ .easyDropDown('disable')
-Disable the dropdown.
-+ .easyDropDown('enable')
-Enable the dropdown.
-+ .easyDropDown('destroy')
-Remove all generated elements and unbind all handlers.
-+ .easyDropDown('select', index/value)
-Programmatically select option by index (integer) or value (string).
-+ .val()
-Get selected value.
